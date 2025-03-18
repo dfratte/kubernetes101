@@ -1,6 +1,6 @@
 # Kubernetes 101
 
-Kubernetes 101 is a beginner-friendly workshop designed for those with no prior knowledge or experience with Kubernetes.
+Kubernetes 101 is a beginner-friendly tutorial designed for those with no prior knowledge or experience with Kubernetes.
 
 ## Goal
 
@@ -10,15 +10,15 @@ Establish a foundational understanding of Kubernetes, combining theoretical know
 
 Basic familiarity with Linux commands is required. Additionally, a general understanding of containers, microservices architecture, and distributed systems is recommended.
 
-## Installation (Before the Workshop)
+## Installation
 
-To participate in this workshop, set up the following tools:
+Set up the following tools:
 
 - **Docker Desktop** – Follow [these instructions](https://docs.docker.com/docker-for-mac/install/)
 - **Bash or Zsh**
 - **A code editor** – Visual Studio Code, Vim, or a similar editor
 
-## Workshop
+## Step by step
 
 ### Verifying Setup
 
@@ -78,6 +78,10 @@ Containers package applications and their dependencies in a standardized way. Le
 
    ![Nginx Default Page](./img/nginx-default.png)
 
+   By following these steps we have started a container from an image that fires up an nginx server.
+
+   <img src="./img/k8s_1.png" alt="drawing"/>
+   
 5. Stop the container before moving to the next section:
    ```sh
    docker kill <CONTAINER_ID>
@@ -123,6 +127,8 @@ kubectl describe pod nginx-pod
 ### Deployments: Managing Application Scaling
 
 A **Deployment** ensures that the desired number of **replica Pods** are running. It manages rolling updates and rollbacks.
+
+<img src="./img/k8s_2.png" alt="drawing"/>
 
 Deployment YAML:
 ```yaml
@@ -170,6 +176,8 @@ kubectl scale deployment nginx-deployment --replicas=2
 ### Services: Enabling Communication Between Pods
 
 Pods have dynamic IP addresses, so Kubernetes provides **Services** to expose applications and provide a stable endpoint.
+
+<img src="./img/k8s_3.png" alt="drawing"/>
 
 Service YAML:
 ```yaml
