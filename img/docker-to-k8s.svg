@@ -1,0 +1,165 @@
+<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="600" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Docker vs Kubernetes: Production Needs
+  </text>
+
+  <!-- Left Panel: Docker Only -->
+  <g id="docker-section">
+    <!-- Panel Background -->
+    <rect x="50" y="80" width="500" height="480" fill="#ffffff" stroke="#e74c3c" stroke-width="3" rx="10"/>
+
+    <!-- Section Title -->
+    <text x="300" y="120" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#e74c3c">
+      Docker (Single Host)
+    </text>
+
+    <!-- Server Box -->
+    <rect x="150" y="160" width="300" height="200" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="5"/>
+    <text x="300" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#34495e">
+      Server / Your Laptop
+    </text>
+
+    <!-- Container 1 -->
+    <rect x="180" y="210" width="110" height="120" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+    <text x="235" y="240" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">
+      Container
+    </text>
+    <text x="235" y="260" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">
+      (App)
+    </text>
+    <text x="235" y="300" font-family="Arial, sans-serif" font-size="32" text-anchor="middle">
+      🐳
+    </text>
+
+    <!-- Container 2 -->
+    <rect x="310" y="210" width="110" height="120" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+    <text x="365" y="240" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">
+      Container
+    </text>
+    <text x="365" y="260" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ffffff">
+      (App)
+    </text>
+    <text x="365" y="300" font-family="Arial, sans-serif" font-size="32" text-anchor="middle">
+      🐳
+    </text>
+
+    <!-- Issues -->
+    <text x="300" y="400" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#e74c3c">
+      ⚠️ Limitations:
+    </text>
+    <text x="300" y="430" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#34495e">
+      ❌ What if it crashes?
+    </text>
+    <text x="300" y="455" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#34495e">
+      ❌ How to scale to 100s?
+    </text>
+    <text x="300" y="480" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#34495e">
+      ❌ Single point of failure
+    </text>
+    <text x="300" y="505" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#34495e">
+      ❌ Manual load balancing
+    </text>
+  </g>
+
+  <!-- Arrow -->
+  <g id="arrow">
+    <path d="M 570 320 L 620 320" stroke="#00B67A" stroke-width="4" fill="none"/>
+    <polygon points="620,320 605,313 605,327" fill="#00B67A"/>
+    <text x="595" y="310" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#00B67A">
+      Orchestration
+    </text>
+  </g>
+
+  <!-- Right Panel: Kubernetes -->
+  <g id="kubernetes-section">
+    <!-- Panel Background -->
+    <rect x="650" y="80" width="500" height="480" fill="#ffffff" stroke="#00B67A" stroke-width="3" rx="10"/>
+
+    <!-- Section Title -->
+    <text x="900" y="120" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#00B67A">
+      Kubernetes (Cluster)
+    </text>
+
+    <!-- Load Balancer -->
+    <rect x="800" y="145" width="200" height="50" fill="#00B67A" stroke="#00905F" stroke-width="2" rx="5"/>
+    <text x="900" y="165" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      Load Balancer
+    </text>
+    <text x="900" y="185" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff">
+      (Service)
+    </text>
+
+    <!-- Traffic arrows -->
+    <path d="M 860 195 L 740 235" stroke="#00905F" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+    <path d="M 900 195 L 900 235" stroke="#00905F" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+    <path d="M 940 195 L 1060 235" stroke="#00905F" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+
+    <!-- Node 1 -->
+    <rect x="680" y="240" width="120" height="100" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="5"/>
+    <text x="740" y="260" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#34495e">
+      Node 1
+    </text>
+    <rect x="700" y="270" width="80" height="55" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="3"/>
+    <text x="740" y="290" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#ffffff">
+      Pod
+    </text>
+    <text x="740" y="310" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">
+      🐳
+    </text>
+
+    <!-- Node 2 -->
+    <rect x="840" y="240" width="120" height="100" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="5"/>
+    <text x="900" y="260" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#34495e">
+      Node 2
+    </text>
+    <rect x="860" y="270" width="80" height="55" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="3"/>
+    <text x="900" y="290" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#ffffff">
+      Pod
+    </text>
+    <text x="900" y="310" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">
+      🐳
+    </text>
+
+    <!-- Node 3 -->
+    <rect x="1000" y="240" width="120" height="100" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="5"/>
+    <text x="1060" y="260" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#34495e">
+      Node 3
+    </text>
+    <rect x="1020" y="270" width="80" height="55" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="3"/>
+    <text x="1060" y="290" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#ffffff">
+      Pod
+    </text>
+    <text x="1060" y="310" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">
+      🐳
+    </text>
+
+    <!-- Benefits -->
+    <text x="900" y="380" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#00B67A">
+      ✅ Benefits:
+    </text>
+    <text x="900" y="410" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#34495e">
+      ✓ High Availability
+    </text>
+    <text x="900" y="435" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#34495e">
+      ✓ Auto-Scaling (1 → 100s)
+    </text>
+    <text x="900" y="460" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#34495e">
+      ✓ Self-Healing
+    </text>
+    <text x="900" y="485" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#34495e">
+      ✓ Automatic Load Balancing
+    </text>
+    <text x="900" y="510" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#34495e">
+      ✓ Rolling Updates
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="575" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#7f8c8d" font-style="italic">
+    Kubernetes orchestrates containers across multiple nodes for production-grade applications
+  </text>
+</svg>
